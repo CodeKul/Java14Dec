@@ -9,13 +9,16 @@ public class EncapsulationDemo {
     private String address;
 
     public void setId(int id) {
-        id = id;
+        if (id>0){
+            id = id;
+        }else {
+            System.out.println("id is zero cannot set");
+        }
     }
 
     public void setName(String str) {
         name = str;
     }
-
 
     public int getId(){
         return id;
