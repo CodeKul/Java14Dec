@@ -13,7 +13,7 @@ package constructor;
  */
 public class ConstructorDemo {
 
-    public ConstructorDemo() {
+    private ConstructorDemo() {
         System.out.println("In constructor");
     }
 
