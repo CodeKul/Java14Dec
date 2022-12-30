@@ -1,5 +1,7 @@
 package thiskeyword;
 
+import statickeyword.StaticDemo;
+
 /**
  *
  * 1. this keyword is used to refer current class instance variable
@@ -51,6 +53,8 @@ class A{
     public static void main(String[] args) {
         A obj = new A();
         obj.display();
+
+        StaticDemo.show();
     }
 
 }

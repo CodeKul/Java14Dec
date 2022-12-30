@@ -1,12 +1,23 @@
 package statickeyword;
 
+/**
+ * static variable - static is used to memory management
+ * if you declare static variable memory is allocated only once
+ *
+ * static method - without creating object of class you can call method
+ */
 public class StaticDemo {
 
     int id;
     String name;
     static String collegeName = "ABC";
 
+    public static void show(){
+        System.out.println("In static show method");
+    }
+
     public static void main(String[] args) {
+        show();
         StaticDemo obj = new StaticDemo();
         obj.id = 1;
         obj.name = "Ravi";
