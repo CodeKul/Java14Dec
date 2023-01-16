@@ -15,7 +15,7 @@ public class FinallyDemo {
 
         }catch (Exception e){
             System.out.println(e);
-        } finally {
+        }finally {
             scanner.close();
         }
 
