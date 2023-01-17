@@ -3,6 +3,7 @@ Throwable -
                 -  SqlException
                 -  ClassNotFoundException
                 -  IOException
+                    - FileNotFoundException
                 -  RuntimeException(UnChecked Exception) -
                         - NullPointerException
                         - NumberFormatException
