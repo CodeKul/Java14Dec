@@ -3,11 +3,7 @@ package multithreading;
 public class SynchronizedDemo {
 
     static int num = 0;
-    private void counter() {
-        synchronized (this) {
-            num++;
-        }
-    }
+
     public static void main(String[] args) throws InterruptedException {
 
         SynchronizedDemo obj = new SynchronizedDemo();
@@ -34,6 +30,12 @@ public class SynchronizedDemo {
         t1.join();
         t3.join();
         System.out.println(num);
+    }
+
+    private void counter() {
+        synchronized (this) {
+            num++;
+        }
     }
 
 
