@@ -2,6 +2,7 @@ package collectionframework;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -27,6 +28,14 @@ public class ArrayListDemo {
 
         System.out.println(list);
 
+        list.forEach(s->{
+            System.out.println(s);
+        });
+
+        Iterator<Integer> integerIterator = list.iterator();
+        while (integerIterator.hasNext()){
+            System.out.println(integerIterator.next());
+        }
 
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = Arrays.asList(1,2,3,6,4);
