@@ -38,7 +38,10 @@ public class ArrayListDemo {
         }
 
         List<Integer> list1 = new ArrayList<>();
+
         List<Integer> list2 = Arrays.asList(1,2,3,6,4);
+        List<Integer> list5 = Arrays.asList(1,2,3,6,4);
+
         List<Integer> list3 = new ArrayList<>(Arrays.asList(1,2,3,6,4));
         List<Integer> list4 = new ArrayList<>(List.of(1,2,3,4));
 
