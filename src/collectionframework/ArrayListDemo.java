@@ -41,6 +41,12 @@ public class ArrayListDemo {
 
         List<Integer> list2 = Arrays.asList(1,2,3,6,4);
         List<Integer> list5 = Arrays.asList(1,2,3,6,4);
+        System.out.println();
+
+
+        for(int i=0,j=list5.size()-1;i<list2.size();i++,j--){
+            System.out.println(list2.get(i)*list5.get(j));
+        }
 
         List<Integer> list3 = new ArrayList<>(Arrays.asList(1,2,3,6,4));
         List<Integer> list4 = new ArrayList<>(List.of(1,2,3,4));
