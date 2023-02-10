@@ -14,6 +14,9 @@ public class MapDemo {
         map1.put(2, "Mumbai");
         map1.put(3, "Nashik");
 
+        System.out.println(map1.entrySet());
+        System.out.println(map1.get(1));
+
         Map<Integer, String> map2 = new HashMap<>();
         map2.put(1, "Pune");
         map2.put(2, "Mumbai");
@@ -29,14 +32,15 @@ public class MapDemo {
         list.add(map2);
         list.add(map3);
 
-        list.forEach(s -> {
-            s.forEach((k, v) -> {
-                System.out.println("key=>" + k + " " + " Value=>" + v);
-            });
-        });
+//        list.forEach(s -> {
+//            s.forEach((k, v) -> {
+//                System.out.println("key=>" + k + " " + " Value=>" + v);
+//            });
+//        });
 
 //        for (Map.Entry<Integer, String> m : map.entrySet()) {
 //            System.out.println(m.getKey() + " " + m.getValue());
 //        }
+
     }
 }
