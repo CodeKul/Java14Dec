@@ -19,7 +19,7 @@ public class ComparableDemo implements Comparable<ComparableDemo> {
     public static void main(String[] args) {
 
         ComparableDemo obj1 = new ComparableDemo(1,"Rahul","Pune");
-        ComparableDemo obj2 = new ComparableDemo(2,"Mahesh","Mumbai");
+        ComparableDemo obj2 = new ComparableDemo(1,"Mahesh","Mumbai");
         ComparableDemo obj3 = new ComparableDemo(3,"Suhas","Nashik");
 
         List<ComparableDemo> list = new ArrayList<>();
