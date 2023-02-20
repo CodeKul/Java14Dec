@@ -8,11 +8,6 @@ public class PreparedStatementDemo {
     public static void main(String[] args) {
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            Connection connection =
-                    DriverManager.getConnection("jdbc:mysql://localhost:3306/java14dec",
-                            "root7","password");
 
             Scanner scanner = new Scanner(System.in);
             int id;
@@ -26,7 +21,7 @@ public class PreparedStatementDemo {
             String insert = "insert into employee(id,name,address) values(?,?,?)";
             String update = "update employee set name = ? where id = ?";
 
-            PreparedStatement preparedStatement = connection.prepareStatement(update);
+            PreparedStatement preparedStatement = Conn.getConn().prepareStatement(update);
             preparedStatement.setString(1,name);
             preparedStatement.setInt(2,id);
 //            preparedStatement.setString(3,address);
@@ -34,7 +29,7 @@ public class PreparedStatementDemo {
             int i =  preparedStatement.executeUpdate();
             System.out.println(i+" row affected");
 
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
