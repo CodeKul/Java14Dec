@@ -11,7 +11,7 @@ public class StringDemo {
 
         String str1 = "pune";
 
-        String str3 = "we"+9+"ll"+8+9+"c"+8+"ome"+10;
+        String str3 = "we"+9+"ll"+8+9+"c"+8+"ome"+(10+10);
 
         System.out.println(str3);
 
