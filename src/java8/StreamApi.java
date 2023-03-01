@@ -3,8 +3,11 @@ package java8;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.IntStream;
 
 /**
  * Stream api - it is sequence of object and have many methods.
@@ -51,7 +54,36 @@ public class StreamApi {
         list.stream().sorted(Comparator.reverseOrder());
 
         System.out.println();
+
         Predicate<Integer> predicate =(number)-> number%2==0;
-        list.stream().filter(predicate).forEach(System.out::println);
+        System.out.println(predicate.test(11));
+
+
+//        list.stream().filter(predicate).forEach(System.out::println);
+
+
+        List<Integer> list1 = Arrays.asList(1,2,5,4,5,6);
+
+        int sum = 0;
+        for (Integer i:list1) {
+            sum = sum +i;
+        }
+
+        System.out.println(sum);
+
+        Optional<Integer> res1 = list1.stream().reduce(((integer, integer2) ->
+                integer+integer2)).get().describeConstable();
+        System.out.println(res1);
+
+        System.out.println(IntStream.of(1,2,5,4,5,6).reduce(Integer::sum).getAsInt());
+
+        List<String> strings = Arrays.asList("Pune","Nashik","Sangli","Kolhapur");
+        Optional<String> res3 = strings
+                .stream()
+                .reduce(((w1, w2) -> w1.length()>w2.length()?w1:w2))
+                .get()
+                .describeConstable();
+        System.out.println(res3);
+
     }
 }
