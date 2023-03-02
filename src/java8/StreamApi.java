@@ -1,12 +1,11 @@
 package java8;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
@@ -84,6 +83,21 @@ public class StreamApi {
                 .get()
                 .describeConstable();
         System.out.println(res3);
+
+
+        List<String> languages = Arrays.asList("Java","C","C","C++","JavaScript","React","Html");
+
+        Set<String> startWithJ = languages.stream().filter((s)->s.startsWith("C")).collect(Collectors.toSet());
+
+        System.out.println(startWithJ);
+
+        Supplier<String> supplier  = new Supplier<String>() {
+            @Override
+            public String get() {
+                return "Hii";
+            }
+        };
+        System.out.println(supplier.get());
 
     }
 }
