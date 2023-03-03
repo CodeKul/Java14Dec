@@ -32,8 +32,8 @@ public class OperatorsDemo {
 //        System.out.println(i<j);
 //        System.out.println(i>j);
 //        System.out.println(i>=j);
-
-//        System.out.println(i<<2);//i*2^2 = 10*4=40
+        int i = 10;
+//        System.out.println(i<<3);//i*2^2 = 10*4=40
 //        System.out.println(i>>2);//i/2^2 = 10/4=2
 
 //        System.out.println(i&j); //1010
@@ -48,7 +48,7 @@ public class OperatorsDemo {
          *     1010
          *
          */
-        int i = 10;
+
         int j = 0;
 //
 //        if(i>0 || j>0){
